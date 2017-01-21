@@ -1,0 +1,59 @@
+
+<!-- <body ng-controller="HomeCtrl"> -->
+
+<div><button href="/#/" ng-click="signOut()">Sign Out</button>
+<button ng-click="timeTable()">View Time Table</button>
+<button ng-click="dummyData()">Some Dummy Data</button>
+</div>
+
+<hr/>		 
+
+<style>
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+</style>
+
+<div align="center">
+<table align="center">
+        
+  <tr ng-repeat="x in listofnames">
+    <td title= "Route">{{ x.Route }}</td>
+    <td title= "Description">{{ x.Description }}</td>
+    <td title= "AM">{{ x.AM }}</td>
+    <td title= "PM">{{ x.PM }}</td>    
+  </tr>
+</table>
+</div>
+
+<div align="center">
+<table align="center">
+  <tr ng-repeat="x in listofdummy">
+<td>{{ x.Route }}</td>
+    <td>{{ x.Description }}</td>
+      </tr>
+</table>
+</div>
+
+<div align="center">
+<table align="center">
+  <tr ng-repeat="x in listofusers">
+    <td>{{ x.Username }}</td>
+    <td>{{ x.Email }}</td>
+  </tr>
+</table>
+</div>
+
+
+
+<!-- </body> -->

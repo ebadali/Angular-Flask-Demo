@@ -1,0 +1,24 @@
+<div ng-app="myApp" ng-controller="SignInCtrl">
+<form class="form-signin"  ng-submit="signIn()">
+   <h2 class="form-signin-heading">Please sign in</h2>
+   <label for="inputEmail" class="sr-only">Email address</label>
+   <input ng-model="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+   <label for="inputPassword" class="sr-only">Password</label>
+   <input ng-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+   
+   <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
+</form>
+	<div ng-if="error != ''" style="font-size: small; color: #ff0000">
+		<br/>
+		<label ng-model="error">{{ error }}</label>  	
+		<br/>
+	</div>
+
+</div>
+
+<div>
+<label >or</label> 
+</div>
+<br/>
+<label >New to this website ?</label> 
+<a role="presentation" href="/#/signup">Sign Up</a>
